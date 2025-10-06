@@ -1,0 +1,29 @@
++-----------------+
+      |   User Query    |
+      +-----------------+
+               |
+               v
+      +-------------------+
+      | IngestionAgent    |
+      | Parses documents  |
+      +-------------------+
+               |
+               | MCP: CONTEXT_INDEXED
+               v
+      +-------------------+
+      | RetrievalAgent    |
+      | Embedding +       |
+      | Semantic Search   |
+      +-------------------+
+               |
+               | MCP: CONTEXT_RESPONSE
+               v
+      +-------------------+
+      | LLMResponseAgent  |
+      | Generates Answer  |
+      +-------------------+
+               |
+               v
+         +------------+
+         | User Output|
+         +------------+
